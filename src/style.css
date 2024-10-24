@@ -1,0 +1,103 @@
+/* Reset básico para eliminar márgenes y padding predeterminados */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* El body y el html deben tener el 100% de la altura del viewport */
+html, body {
+  height: 100%;
+}
+
+/* Usamos Flexbox para que el contenido del body se distribuya correctamente */
+body {
+  display: flex;
+  flex-direction: column;
+  font-family: sans-serif;
+}
+
+
+/* Estilos para la sección principal */
+#main {
+  background: url("./assets/BG-PAGE.webp") no-repeat;
+  background-position: center;
+  background-size: cover;
+  flex: 1; /* Asegura que ocupe espacio */
+
+  &  #main-container{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem 1rem;
+
+  }
+}
+
+.Contact, .menu{
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  background-color:#333;
+  color: aliceblue;
+  padding: 2rem 1rem;
+  border-radius: 10px;
+
+  & h3{
+    font-size: 2.6rem;
+  }
+  & p{
+    font-size: 2rem;
+  }
+
+  & ul{
+    list-style: none;
+  }
+}
+
+/* Estilos básicos para el header y el footer */
+.header {
+  background-color: #333;
+  padding: 20px;
+  color: aliceblue;
+  font-weight: bold;
+}
+
+.navbar{
+  box-sizing: border-box;
+
+  & ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+  }
+
+  & button {
+    font-size: 1.5rem;
+    background-color: transparent;
+    border: none;
+    color: aliceblue;
+    font-weight: bold;
+    border-bottom: 1px solid transparent; /* Borde invisible por defecto */
+    transition: border-bottom 0.3s ease; /* Transición más rápida */
+  }
+  & button:hover{
+    border-bottom: 1px solid white; /* Aparece el borde blanco al hacer hover */
+  }
+
+}
+
+.footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 1.5rem;
+  font-size: 1.5rem;
+}
+
+.footer span {
+  font-size: 1rem;
+}
